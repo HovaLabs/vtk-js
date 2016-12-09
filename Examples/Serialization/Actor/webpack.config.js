@@ -9,10 +9,10 @@ module.exports = {
       inject: 'body',
     }),
   ],
-  entry: './Examples/WebGL/EmptyRenderer/index.js',
+  entry: './Examples/Serialization/Actor/index.js',
   output: {
-    path: path.resolve(__dirname, '../../../dist/EmptyRenderer'),
-    filename: 'EmptyRenderer.js',
+    path: path.resolve(__dirname, '../../../dist/Actor'),
+    filename: 'Actor.js',
   },
   module: {
     preLoaders: [{
@@ -26,8 +26,9 @@ module.exports = {
     configFile: '.eslintrc.js',
   },
   devServer: {
-    contentBase: './dist/EmptyRenderer',
+    contentBase: './dist/Actor',
     port: 9999,
+    host: '0.0.0.0',
     hot: true,
     quiet: false,
     noInfo: false,
